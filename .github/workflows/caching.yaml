@@ -40,7 +40,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: caching/react-app/node_modules
-          key: cache-key-${{hashFiles( "caching/react-app/package-lock.json") }} 
+          key: cache-key-${{ hashFiles( 'caching/react-app/package-lock.json') }} 
 
       - if: ${{ ! steps.build.outputs.cache-hit == true }} 
         name: Install dependencies
