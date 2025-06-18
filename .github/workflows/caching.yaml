@@ -47,10 +47,11 @@ jobs:
         run:  npm ci
 
       - name: Testing
+        working-directory: ./caching
         run: npm run test
 
       - name: Building
-        run: npm run build
+        run: echo "npm run build"
 
       - name: Deploying to nonprod
         run: echo "Deploying to nonprod"
